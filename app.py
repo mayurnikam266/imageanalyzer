@@ -19,7 +19,7 @@ def get_gemini_response(input,image):
 
 st.set_page_config(page_title="Gemini image demo")
 
-st.header("Gemini application")
+st.header("Gemini Image Analyzer")
 input=st.text_input("Input Prompt", key="input")
 
 uploaded_file=st.file_uploader("Choose an image...", type=["jpg","jpeg","png"])
@@ -31,7 +31,7 @@ if uploaded_file is not None:
     st.image(image, caption="Uploaded Image", use_column_width=True)
 ##  if submit button clicked
 
-submit=st.button("tell me about the image")
+submit=st.button("Tell me about the image")
 ## if button clicked
 if submit:
     response=get_gemini_response(input, image)
